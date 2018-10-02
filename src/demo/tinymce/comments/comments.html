@@ -1,0 +1,113 @@
+
+<div class="tox tox-tinymce">
+    <div class="tox-toolbar">
+        <div class="tox-toolbar__group">
+            <button type="button" class="tox-tbtn tox-tbtn--select">
+                <span class="tox-tbtn__select-label">Paragraph</span>
+                <div class="tox-tbtn__select-chevron">
+                    <svg data-name="icon-chevron-down"></svg>
+                </div>
+            </button>
+        </div>
+
+        <div class="tox-toolbar__group">
+            <button type="button" class="tox-tbtn">
+                <svg data-name="icon-bold"></svg>
+            </button>
+
+            <button type="button" class="tox-tbtn">
+                <svg data-name="icon-italic"></svg>
+            </button>
+
+            <div class="tox-split-button">
+                <button type="button" class="tox-tbtn">
+                    <svg data-name="icon-align-left"></svg>
+                </button>
+                <button type="button" class="tox-tbtn tox-split-button__chevron">
+                    <svg data-name="icon-chevron-down"></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="tox-toolbar__group">
+            <div class="tox-split-button">
+                <button type="button" class="tox-tbtn">
+                    <svg data-name="icon-ordered-list"></svg>
+                </button>
+                <button type="button" class="tox-tbtn tox-split-button__chevron">
+                    <svg data-name="icon-chevron-down"></svg>
+                </button>
+            </div>
+
+            <div class="tox-split-button">
+                <button type="button" class="tox-tbtn">
+                    <svg data-name="icon-unordered-list"></svg>
+                </button>
+                <button type="button" class="tox-tbtn tox-split-button__chevron">
+                    <svg data-name="icon-chevron-down"></svg>
+                </button>
+            </div>
+
+            <button type="button" class="tox-tbtn">
+                <svg data-name="icon-outdent"></svg>
+            </button>
+
+            <button type="button" class="tox-tbtn">
+                <svg data-name="icon-indent"></svg>
+            </button>
+        </div>
+
+        <div class="tox-toolbar__group">
+            <button type="button" class="tox-tbtn tox-tbtn--enabled">
+                <svg data-name="icon-comment"></svg>
+            </button>
+
+            <button type="button" class="tox-tbtn">
+                <svg data-name="icon-help"></svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="tox-edit-area">
+        <iframe class="tox-edit-area__iframe" src="editor-content.html" style="height: 75vh;">
+            <p>Hello</p>
+        </iframe>
+
+        <div class="tox-comment">
+            <div class="tox-comment__list">
+                <div class="tox-comment__item">
+                    <div class="tox-user">
+                        <div class="tox-user__avatar">
+                            <svg data-name="icon-user"></svg>
+                        </div>
+                        <div class="tox-user__name">David Affran</div>
+                    </div>
+
+                    <div class="tox-comment__body">
+                        <p>Can you update to the latest figures for 2017 before you publish?</p>
+                    </div>
+                </div>
+
+                <div class="tox-comment__item">
+                    <div class="tox-user">
+                        <div class="tox-user__avatar">
+                            <svg data-name="icon-user"></svg>
+                        </div>
+                        <div class="tox-user__name">Fredrik Danielsson</div>
+                    </div>
+
+                    <div class="tox-comment__body">
+                        <p>Yeah, sure</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tox-comment__reply">
+                <textarea rows="2" class="tox-textarea" placeholder="Say something..."></textarea>
+                <button class="tox-button">Reply</button>
+                <button class="tox-button tox-button--secondary">Delete conversation</button>
+            </div>
+        </div>
+    </div>
+</div>
+

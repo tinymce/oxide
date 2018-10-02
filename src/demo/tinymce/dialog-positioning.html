@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/skin-default.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/scripts.js"></script>
+</head>
+
+<body style="height: 100vh; margin: 0; padding: 0">
+    <h1 style="margin: 0;">Dialog positioning</h1>
+
+    <!-- A wrapper around all dialogs. -->
+    <div class="tox tox-dialog-wrap">
+        <!-- Backdrop element. -->
+        <div class="tox-dialog-wrap__backdrop"></div>
+
+        <!-- The dialog element. -->
+        @@include('dialog/dialog-11.html')
+    </div>
+</body>

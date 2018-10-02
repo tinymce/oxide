@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/skin-default.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/scripts.js"></script>
+</head>
+<body>
+    <h1>TinyMCE Oxide theme for Alloy</h1>
+
+    @@include('icon-pack-select.html')
+
+    <section class="demo-section">
+        <header>
+            <h2>Editors</h2>
+        </header>
+
+        <article style="flex-basis: 100%;">
+            @@include('default-editor/basic-editor.html')
+        </article>
+
+        <article style="flex-basis: 100%;">
+            @@include('default-editor/full-editor.html')
+        </article>
+        <article style="flex-basis: 100%;">
+            <p>Toolbar button states</p>
+
+            @@include('default-editor/states.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Pop Editor</h2>
+            <p>Pop editor is the old inlite-theme and used for distraction free editing. Drop down menues doesn't look good on these brand of editors, therefore we open menues as sub toolbars with a back button like the medium sized icon with back button example below. Also we're prepearing for block editing with the insert toolbar.</p>
+        </header>
+
+        <article>
+            <p>Regular toolbar</p>
+            @@include('pop-editor/toolbar.html')
+        </article>
+
+        <article>
+            <p>Input</p>
+            @@include('pop-editor/input.html')
+        </article>
+
+        <article>
+            <p>Input with label</p>
+            @@include('pop-editor/input-2.html')
+        </article>
+
+        <article>
+            <p>Medium sized icons with back button.</p>
+            @@include('pop-editor/toolbar-big.html')
+        </article>
+
+        <article>
+            <p>Choose color swatch</p>
+            @@include('pop-editor/color-swatches.html')
+        </article>
+
+        <article>
+            <p>Insert toolbar</p>
+            @@include('pop-editor/insert.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Menus</h2>
+        </header>
+
+        <article>
+            <p>Menu with icons</p>
+            @@include('menu/collection-list.html')
+        </article>
+
+        <article>
+            <p>Menu with collection toolbar</p>
+            @@include('menu/collection-toolbar.html')
+        </article>
+
+        <article style="max-width: 362px;">
+            <p>Menu with collection grid</p>
+            @@include('menu/collection-grid.html')
+        </article>
+
+
+        <article>
+            <p>Swatch picker</p>
+            @@include('menu/swatch-picker.html')
+        </article>
+
+        <article>
+            <p>Insert table picker</p>
+            @@include('menu/insert-table.html')
+        </article>
+
+        <article>
+            <p>Format menu (Remove)</p>
+            @@include('menu/format.html')
+        </article>
+
+        <article>
+            <p>Menu with toolbar (Remove)</p>
+            @@include('menu/table.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Checkbox</h2>
+        </header>
+
+        <article>
+            @@include('checkbox/checkbox.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Slider</h2>
+        </header>
+
+        <article>
+            @@include('slider/slider.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Progress bar</h2>
+        </header>
+
+        <article>
+            @@include('progress-bar/progress-bar.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Well</h2>
+        </header>
+
+        <article style="flex-basis: 100%;">
+            @@include('well/well.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Notification</h2>
+        </header>
+
+        <article>
+            @@include('notification/notification.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Sidebar</h2>
+        </header>
+
+        <article style="flex-basis: 100%;">
+            @@include('sidebar/sidebar.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Spinner (I'm busy)</h2>
+        </header>
+
+        <article>
+            @@include('spinner/spinner.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Dropzone</h2>
+        </header>
+
+        <article style="flex-basis: 100%;">
+            @@include('dropzone/dropzone.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Tooltip</h2>
+        </header>
+
+        <article>
+            @@include('tooltip/tooltip.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Dialog</h2>
+        </header>
+
+        <article style="flex-basis: 100%;">
+            <ul>
+                <li><a href="dialog-positioning.html">Dialog positioning demo</a></li>
+            </ul>
+        </article>
+
+        <article>
+            @@include('dialog/dialog-1.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-13.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-2.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-3.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-5.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-7.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-8.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-10.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-11.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-12.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-4.html')
+        </article>
+
+        <article style="flex-basis: 100%;">
+            @@include('dialog/dialog-6.html')
+        </article>
+
+        <article style="flex-basis: 100%;">
+            @@include('dialog/dialog-9.html')
+        </article>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Tiny Comments</h2>
+        </header>
+
+        <article style="flex-basis: 100%;">
+            @@include('comments/comments.html')
+        </article>
+    </section>
+
+    <script src="../iconManager.js"></script>
+</body>
+</html>

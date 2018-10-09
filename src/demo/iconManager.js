@@ -11,32 +11,32 @@ tinymce.IconManager = (function() {
   }
 
   function getActiveIconPack() {
-    return localStorage.getItem('active-icon-pack') || 'default';
+    return sessionStorage.getItem('active-icon-pack') || 'default';
   }
 
   function setActiveIconPack(packName) {
     if (iconPacks[packName]) {
       injectIconPack(iconPacks[packName]);
-      localStorage.setItem('active-icon-pack', packName);
+      sessionStorage.setItem('active-icon-pack', packName);
     }
   }
 
   function injectIconPack(iconPack) {
-    document.querySelectorAll('svg').forEach((svg) => {
+    $('svg').each(function (name, svg) {
       if (iconPack[svg.getAttribute('data-name')]) {
         const div = document.createElement('div');
         div.innerHTML = iconPack[svg.getAttribute('data-name')];
         div.firstChild.setAttribute('data-name', svg.getAttribute('data-name'));
-        svg.parentElement.insertBefore(div.firstChild, svg);
-        svg.remove();
+        svg.parentNode.insertBefore(div.firstChild, svg);
+        $(svg).remove();
       }
     });
   }
 
   return {
-    add,
-    setActiveIconPack,
-    getActiveIconPack
+    add: add,
+    setActiveIconPack: setActiveIconPack,
+    getActiveIconPack: getActiveIconPack
   }
 })();
 

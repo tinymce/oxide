@@ -1,96 +1,91 @@
 <div class="tox tox-tinymce-aux">
-<div class="tox-dialog" role="dialog" style="position: relative;" tabindex="-1">
-    <div class="tox-dialog__header" role="presentation">
-        <div>
-            Table Properties
+    <div class="tox-dialog">
+        <div class="tox-dialog__header">
+            <span class="tox-dialog__title">Table Properties</span>
+            <div class="tox-dialog__draghandle"></div>
+            <button type="button" class="tox-button tox-button--icon tox-button--naked">
+                <div class="tox-icon">
+                    <svg data-name="icon-close"></svg>
+                </div>
+            </button>
         </div>
-        <div class="tox-dialog__draghandle">
-        </div>
-        <button class="tox-button tox-button--icon tox-button--naked" role="button" tabindex="-1" type="button">
-            <div class="tox-icon">
-                <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.953 7.453L13.422 12l4.531 4.547-1.406 1.406L12 13.422l-4.547 4.531-1.406-1.406L10.578 12 6.047 7.453l1.406-1.406L12 10.578l4.547-4.531z" fill-rule="evenodd"></path></svg>
-            </div>
-        </button>
-    </div>
-    <div class="tox-dialog__content-js">
+
         <div class="tox-dialog__body">
-            <div class="tox-dialog__body-nav" data-alloy-tabstop="true" role="tablist">
-                <div class="tox-tab tox-dialog__body-nav-item" role="tab" tabindex="-1">
+            <div class="tox-dialog__body-nav">
+                <div class="tox-tab tox-dialog__body-nav-item">
                     General
                 </div>
-                <div class="tox-tab tox-dialog__body-nav-item tox-dialog__body-nav-item--active" role="tab" tabindex="-1">
+                <div class="tox-tab tox-dialog__body-nav-item tox-dialog__body-nav-item--active">
                     Advanced
                 </div>
             </div>
-            <div class="tox-dialog__body-content" role="tabpanel">
+            <div class="tox-dialog__body-content">
                 <div class="tox-form">
                     <div class="tox-form__group">
-                        <label class="tox-label">Border style</label><select data-alloy-tabstop="true" size="1" tabindex="-1">
-                            <option value="">
-                                Select...
-                            </option>
-                            <option value="solid">
-                                Solid
-                            </option>
-                            <option value="dotted">
-                                Dotted
-                            </option>
-                            <option value="dashed">
-                                Dashed
-                            </option>
-                            <option value="double">
-                                Double
-                            </option>
-                            <option value="groove">
-                                Groove
-                            </option>
-                            <option value="ridge">
-                                Ridge
-                            </option>
-                            <option value="inset">
-                                Inset
-                            </option>
-                            <option value="outset">
-                                Outset
-                            </option>
-                            <option value="none">
-                                None
-                            </option>
-                            <option value="hidden">
-                                Hidden
-                            </option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                            <label class="tox-label" for="form-field_3077591634691538101567353">Border color</label>
-                            <div class="tox-color-input">
-                                <input class="tox-textfield" type="input" tabindex="-1" data-alloy-tabstop="true" id="form-field_3077591634691538101567353">
-                                <span role="button" aria-haspopup="true" tabindex="-1" unselectable="on" data-alloy-tabstop="true" aria-pressed="false" aria-expanded="false" style="background-color: rgb(255, 255, 255);">
-                                </span>
-                            </div>
+                        <label class="tox-label">Border style</label>
+                        <div class="tox-selectfield">
+                            <select class="tox-selectfield">
+                                <option value="">
+                                    Select...
+                                </option>
+                                <option value="solid">
+                                    Solid
+                                </option>
+                                <option value="dotted">
+                                    Dotted
+                                </option>
+                                <option value="dashed">
+                                    Dashed
+                                </option>
+                                <option value="double">
+                                    Double
+                                </option>
+                                <option value="groove">
+                                    Groove
+                                </option>
+                                <option value="ridge">
+                                    Ridge
+                                </option>
+                                <option value="inset">
+                                    Inset
+                                </option>
+                                <option value="outset">
+                                    Outset
+                                </option>
+                                <option value="none">
+                                    None
+                                </option>
+                                <option value="hidden">
+                                    Hidden
+                                </option>
+                            </select>
                         </div>
+                    </div>
 
                     <div>
-                        <label class="tox-label" for="form-field_3077591634691538101567353">Background color</label>
+                        <label class="tox-label" for="">Border color</label>
                         <div class="tox-color-input">
-                            <input class="tox-textfield" placeholder="#ffffff" type="input" tabindex="-1" data-alloy-tabstop="true" id="form-field_3077591634691538101567353">
-                            <span role="button" aria-haspopup="true" tabindex="-1" unselectable="on" data-alloy-tabstop="true" aria-pressed="false" aria-expanded="false" style="background-color: rgb(132, 5, 5);">
-                            </span>
+                            <input class="tox-textfield" type="input">
+                            <span style="background-color: rgb(255, 255, 255);"></span>
                         </div>
                     </div>
 
-
+                    <div>
+                        <label class="tox-label" for="">Background color</label>
+                        <div class="tox-color-input">
+                            <input class="tox-textfield" type="input">
+                            <span style="background-color: rgb(132, 5, 5);"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="tox-dialog__footer">
-        <div class="tox-dialog__footer-start" role="presentation"></div>
-        <div class="tox-dialog__footer-end" role="presentation">
-            <button class="tox-button" data-alloy-tabstop="true" role="button" tabindex="-1" type="button">Ok</button><button class="tox-button tox-button--secondary" data-alloy-tabstop="true" role="button" tabindex="-1" type="button">Cancel</button>
+
+        <div class="tox-dialog__footer">
+            <div class="tox-dialog__footer-start"></div>
+            <div class="tox-dialog__footer-end">
+                <button type="button" class="tox-button">Ok</button>
+            </div>
         </div>
     </div>
-</div>
 </div>

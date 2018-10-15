@@ -1,64 +1,63 @@
 <div class="tox tox-tinymce-aux">
     <div class="tox-dialog">
-    <div class="tox-dialog__header">
-        <div class="tox-dialog__title">Color</div>
-        <div class="tox-dialog__draghandle"></div>
-        <button type="button" aria-label="Close" tabindex="-1" class="tox-button tox-button--icon tox-button--naked">
-        <div data-alloy-id="_4158911611021532409578100" class="tox-icon">
-            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.953 7.453L13.422 12l4.531 4.547-1.406 1.406L12 13.422l-4.547 4.531-1.406-1.406L10.578 12 6.047 7.453l1.406-1.406L12 10.578l4.547-4.531z"
-                fill-rule="evenodd"></path>
-            </svg>
+        <div class="tox-dialog__header">
+            <span class="tox-dialog__title">Color</span>
+            <div class="tox-dialog__draghandle"></div>
+            <button type="button" class="tox-button tox-button--icon tox-button--naked">
+                <div class="tox-icon">
+                    <svg data-name="icon-close"></svg>
+                </div>
+            </button>
         </div>
-        </button>
-    </div>
-    <div class="tox-dialog__body todo-tox-fit">
-        <div class="tox-dialog__body-content">
-        <div class="tox-color-picker-container">
-            <div class="tox-sv-palette" style="position: relative;">
-            <canvas class="tox-sv-palette-spectrum"></canvas>
-            <div class="tox-sv-palette-thumb" style="position: absolute; left: -6px; top: -6px;">
-                <div class="tox-sv-palette-inner-thumb"></div>
+
+        <div class="tox-dialog__body todo-tox-fit">
+            <div class="tox-dialog__body-content">
+                <div class="tox-color-picker-container">
+                    <div class="tox-sv-palette" style="position: relative;">
+                        <canvas class="tox-sv-palette-spectrum"></canvas>
+                        <div class="tox-sv-palette-thumb" style="position: absolute; left: -6px; top: -6px;">
+                            <div class="tox-sv-palette-inner-thumb"></div>
+                        </div>
+                    </div>
+                    <div class="tox-hue-slider" style="position: relative;">
+                        <div class="tox-hue-slider-spectrum"></div>
+                        <div class="tox-hue-slider-thumb" style="position: absolute; top: -2px;"></div>
+                    </div>
+                    <form aria-label="Color Picker" class="tox-rgb-form">
+                        <div>
+                            <label aria-label="Red component" for="form-field_6423089711351532409578134">R</label>
+                            <input type="text" id="form-field_6423089711351532409578134" aria-labelledby="form-field_8580102931361532409578134">
+                            <span data-alloy-id="uid_891907388801532409578086-aria-descriptor" aria-hidden="true" id="form-field_8580102931361532409578134"
+                            style="display: none;">Range 0 to 255</span>
+                        </div>
+                        <div>
+                            <label aria-label="Green component" for="form-field_8251444841371532409578135">G</label>
+                            <input type="text" id="form-field_8251444841371532409578135" aria-labelledby="form-field_4859265721381532409578135">
+                            <span data-alloy-id="uid_993975898821532409578087-aria-descriptor" aria-hidden="true" id="form-field_4859265721381532409578135"
+                            style="display: none;">Range 0 to 255</span>
+                        </div>
+                        <div>
+                            <label aria-label="Blue component" for="form-field_6720423661391532409578136">B</label>
+                            <input type="text" id="form-field_6720423661391532409578136" aria-labelledby="form-field_9759026551401532409578136">
+                            <span data-alloy-id="uid_994763419841532409578088-aria-descriptor" aria-hidden="true" id="form-field_9759026551401532409578136"
+                            style="display: none;">Range 0 to 255</span>
+                        </div>
+                        <div>
+                            <label aria-label="Hex color code" for="form-field_3065326191411532409578136">#</label>
+                            <input type="text" id="form-field_3065326191411532409578136">
+                        </div>
+                        <div data-alloy-id="memento_351774721761532409578080" class="tox-rgba-preview" style="background-color: white;"></div>
+                    </form>
+                </div>
             </div>
-            </div>
-            <div class="tox-hue-slider" style="position: relative;">
-            <div class="tox-hue-slider-spectrum"></div>
-            <div class="tox-hue-slider-thumb" style="position: absolute; top: -2px;"></div>
-            </div>
-            <form aria-label="Color Picker" class="tox-rgb-form">
-            <div>
-                <label aria-label="Red component" for="form-field_6423089711351532409578134">R</label>
-                <input type="text" id="form-field_6423089711351532409578134" aria-labelledby="form-field_8580102931361532409578134">
-                <span data-alloy-id="uid_891907388801532409578086-aria-descriptor" aria-hidden="true" id="form-field_8580102931361532409578134"
-                style="display: none;">Range 0 to 255</span>
-            </div>
-            <div>
-                <label aria-label="Green component" for="form-field_8251444841371532409578135">G</label>
-                <input type="text" id="form-field_8251444841371532409578135" aria-labelledby="form-field_4859265721381532409578135">
-                <span data-alloy-id="uid_993975898821532409578087-aria-descriptor" aria-hidden="true" id="form-field_4859265721381532409578135"
-                style="display: none;">Range 0 to 255</span>
-            </div>
-            <div>
-                <label aria-label="Blue component" for="form-field_6720423661391532409578136">B</label>
-                <input type="text" id="form-field_6720423661391532409578136" aria-labelledby="form-field_9759026551401532409578136">
-                <span data-alloy-id="uid_994763419841532409578088-aria-descriptor" aria-hidden="true" id="form-field_9759026551401532409578136"
-                style="display: none;">Range 0 to 255</span>
-            </div>
-            <div>
-                <label aria-label="Hex color code" for="form-field_3065326191411532409578136">#</label>
-                <input type="text" id="form-field_3065326191411532409578136">
-            </div>
-            <div data-alloy-id="memento_351774721761532409578080" class="tox-rgba-preview" style="background-color: white;"></div>
-            </form>
         </div>
+
+        <div class="tox-dialog__footer">
+            <div class="tox-dialog__footer-start"></div>
+            <div class="tox-dialog__footer-end">
+                <button type="button" class="tox-button">Ok</button>
+                <button type="button" class="tox-button tox-button--secondary">Cancel</button>
+            </div>
         </div>
-    </div>
-    <div class="tox-dialog__footer">
-        <div class="tox-dialog__footer-start"></div>
-        <div class="tox-dialog__footer-end">
-        <button type="button" class="tox-button">Ok</button>
-        <button type="button" class="tox-button tox-button--secondary">Cancel</button>
-        </div>
-    </div>
     </div>
 </div>

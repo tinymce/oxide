@@ -33,16 +33,37 @@ tinymce.IconManager = (function() {
     });
   }
 
+  var list = function () {
+    return iconPacks;
+  }
+
   return {
     add: add,
     setActiveIconPack: setActiveIconPack,
-    getActiveIconPack: getActiveIconPack
+    getActiveIconPack: getActiveIconPack,
+    list: list
   }
 })();
 
 (function() {
-  document.querySelector('select#icons-selector').value = tinymce.IconManager.getActiveIconPack();
-  document.querySelector('select#icons-selector').addEventListener('change', function (e) {
-    tinymce.IconManager.setActiveIconPack(e.target.value);
-  });
+  document.addEventListener('DOMContentLoaded', function () {
+    var iconKeys = Object.keys(tinymce.IconManager.list());
+    if (iconKeys.length > 1) {
+      var iconPacker = document.querySelector('.icon-packer');
+      var select = document.createElement('select');
+      iconKeys.forEach(function (key) {
+        var option = document.createElement('option');
+        option.value = key;
+        option.innerText = key;
+        select.appendChild(option);
+      });
+      
+      select.value = tinymce.IconManager.getActiveIconPack();
+      select.addEventListener('change', function (e) {
+        tinymce.IconManager.setActiveIconPack(e.target.value);
+      });
+      
+      iconPacker.appendChild(select);
+    }
+  })
 })();

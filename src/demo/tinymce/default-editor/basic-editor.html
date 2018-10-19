@@ -1,84 +1,86 @@
-<div class="tox tox-tinymce">
-    <div class="tox-toolbar">
-        <div class="tox-toolbar__group">
-            <button type="button" class="tox-tbtn tox-tbtn--select">
-                <span class="tox-tbtn__select-label">Paragraph</span>
-                <div class="tox-tbtn__select-chevron">
-                    <svg data-name="icon-chevron-down"></svg>
+<div class="tox tox-tinymce" style="height: 340px">
+    <div class="tox-editor-container">
+        <div class="tox-toolbar">
+            <div class="tox-toolbar__group">
+                <button type="button" class="tox-tbtn tox-tbtn--select">
+                    <span class="tox-tbtn__select-label">Paragraph</span>
+                    <div class="tox-tbtn__select-chevron">
+                        <svg data-name="icon-chevron-down"></svg>
+                    </div>
+                </button>
+            </div>
+
+            <div class="tox-toolbar__group">
+
+                <button type="button" class="tox-tbtn">
+                    <svg data-name="icon-bold"></svg>
+                </button>
+
+                <button type="button" class="tox-tbtn">
+                    <svg data-name="icon-italic"></svg>
+                </button>
+
+                <div class="tox-split-button">
+                    <button type="button" class="tox-tbtn">
+                        <svg data-name="icon-ordered-list"></svg>
+                    </button>
+                    <button type="button" class="tox-tbtn tox-split-button__chevron">
+                        <svg data-name="icon-chevron-down"></svg>
+                    </button>
                 </div>
-            </button>
-        </div>
 
-        <div class="tox-toolbar__group">
+                <div class="tox-split-button">
+                    <button type="button" class="tox-tbtn">
+                        <svg data-name="icon-unordered-list"></svg>
+                    </button>
+                    <button type="button" class="tox-tbtn tox-split-button__chevron">
+                        <svg data-name="icon-chevron-down"></svg>
+                    </button>
+                </div>
 
-            <button type="button" class="tox-tbtn">
-                <svg data-name="icon-bold"></svg>
-            </button>
-
-            <button type="button" class="tox-tbtn">
-                <svg data-name="icon-italic"></svg>
-            </button>
-
-            <div class="tox-split-button">
                 <button type="button" class="tox-tbtn">
-                    <svg data-name="icon-ordered-list"></svg>
+                    <svg data-name="icon-link"></svg>
                 </button>
-                <button type="button" class="tox-tbtn tox-split-button__chevron">
-                    <svg data-name="icon-chevron-down"></svg>
+
+                <button type="button" class="tox-tbtn">
+                    <svg data-name="icon-image"></svg>
+                </button>
+
+                <button type="button" class="tox-tbtn">
+                    <svg data-name="icon-quote"></svg>
                 </button>
             </div>
 
-            <div class="tox-split-button">
-                <button type="button" class="tox-tbtn">
-                    <svg data-name="icon-unordered-list"></svg>
-                </button>
-                <button type="button" class="tox-tbtn tox-split-button__chevron">
-                    <svg data-name="icon-chevron-down"></svg>
-                </button>
+            <div class="tox-toolbar__group tox-toolbar__group--pull-right">
+                <!-- API-key missing alert -->
+                <!-- <button type="button" class="tox-tbtn tox-tbtn--labeled tox-tbtn--ipm-alert">
+                    <span class="tox-tbtn__select-label">Api key missing</span>
+                    <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m18.55 5.95c-1.95-1.95-5.15-1.95-7.1.05-1.2 1.2-1.7 2.9-1.35 4.55l-.55.3c-.1.05-.15.2-.1.35 0 0 .05.05.05.05l.45.45-.4.4h-.5c-.15 0-.25.1-.25.25v.5l-.5.5h-.5c-.15 0-.25.1-.25.25v.5l-.5.5h-.55c-.15 0-.25.1-.25.25v.5l-1.15 1.15c-.05.1-.1.15-.1.25v2.5c0 .1.1.25.25.25h2.5c.05 0 .15-.05.15-.05l4.85-4.85.45.45c.05.05.15.1.2.05.1 0 .15-.05.2-.15l.3-.55c2.7.6 5.35-1.15 5.95-3.85.35-1.65-.15-3.4-1.3-4.6zm-6.6 7-4.5 4.5c-.1.1-.25.1-.35 0s-.1-.25 0-.35l4.5-4.5c.1-.1.25-.1.35 0 .1.05.1.25 0 .35zm4.55-3.45c-.85 0-1.5-.65-1.5-1.5s.65-1.5 1.5-1.5 1.5.65 1.5 1.5-.65 1.5-1.5 1.5z"/></svg>
+                </button> -->
+
+                <!-- General alert -->
+                <!-- <button type="button" class="tox-tbtn tox-tbtn--labeled tox-tbtn--ipm-alert">
+                    <span class="tox-tbtn__select-label">Quota exceeded</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>icon-ipm-alert</title><path d="M19.787 18.313c.26.458.294.854.102 1.187-.193.333-.555.5-1.086.5H5.209c-.531 0-.893-.167-1.086-.5-.193-.333-.159-.73.101-1.188l6.829-13.609c.135-.24.283-.417.445-.531A.864.864 0 0 1 12.006 4c.177 0 .346.057.508.172.161.114.31.292.445.531l6.828 13.61zM12.006 18a.966.966 0 0 0 .71-.29.966.966 0 0 0 .29-.71.966.966 0 0 0-.29-.71.966.966 0 0 0-.71-.29.966.966 0 0 0-.711.29.966.966 0 0 0-.29.71c0 .281.097.518.29.71.193.194.43.29.71.29zm.687-3l.313-4a.966.966 0 0 0-.29-.71.966.966 0 0 0-.71-.29.966.966 0 0 0-.711.29.966.966 0 0 0-.29.71l.313 4h1.375z" fill-rule="evenodd"/></svg>
+                </button> -->
+
+                <!-- News -->
+                <!-- <button type="button" class="tox-tbtn tox-tbtn--ipm-news">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>icon-ipm-news</title><g transform="translate(3 2)" fill="none"><path d="M10.492 6.978H7.507A6.883 6.883 0 0 1 3.726 5.24a2.512 2.512 0 0 1 0-3.53 2.538 2.538 0 0 1 3.52 0c.52.523 1.9 2.648 1.71 4.067h.085c-.189-1.418 1.191-3.545 1.712-4.069a2.536 2.536 0 0 1 3.52 0 2.51 2.51 0 0 1 0 3.53 6.877 6.877 0 0 1-3.781 1.739zm0-1.2a5.898 5.898 0 0 0 2.929-1.383 1.292 1.292 0 1 0-1.817-1.835c-.809.814-1.613 2.892-1.333 3.182a.397.397 0 0 0 .22.036zm-5.004-3.6c-.342-.001-.67.135-.91.379a1.308 1.308 0 0 0 0 1.838 5.903 5.903 0 0 0 2.93 1.383.406.406 0 0 0 .221-.039c.28-.291-.529-2.37-1.333-3.179a1.274 1.274 0 0 0-.908-.383z" fill="#F1C40F"/><path d="M1 9.981v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9H1z" fill="#D34739"/><path d="M17 6.981H1a1 1 0 0 0-1 1v2.5a.5.5 0 0 0 .5.5h17a.5.5 0 0 0 .5-.5v-2.5a1 1 0 0 0-1-1z" fill="#EE6556"/><path fill="#F1C40F" d="M8 6.981L10 6.981 10 19.981 8 19.981z"/><path fill="#F1C40F" d="M0.943286673 13.7010512L16.8824018 12.3065594 17.0567133 14.2989488 1.11759816 15.6934406z"/></g></svg>
+                </button> -->
+
+                <!-- About Tiny -->
+                <!-- <button type="button" class="tox-tbtn tox-tbtn--ipm-tiny">
+                    <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="m0 0h24v24h-24z"/><path d="m4 13 8 8 10-10" stroke="#1a76d2" stroke-linecap="square" stroke-width="1.5"/><path d="m2 4 10 10 8-8" stroke="#1a76d2" stroke-linecap="square" stroke-width="1.5" transform="matrix(1 0 0 -1 0 18)"/><path d="m10 9h4v1h-4zm0 6h4v1h-4zm-2-2h8v1h-8zm0-2h8v1h-8z" fill="#1a76d2"/></g></svg>
+                </button> -->
+
             </div>
-
-            <button type="button" class="tox-tbtn">
-                <svg data-name="icon-link"></svg>
-            </button>
-
-            <button type="button" class="tox-tbtn">
-                <svg data-name="icon-image"></svg>
-            </button>
-
-            <button type="button" class="tox-tbtn">
-                <svg data-name="icon-quote"></svg>
-            </button>
         </div>
 
-        <div class="tox-toolbar__group tox-toolbar__group--pull-right">
-            <!-- API-key missing alert -->
-            <!-- <button type="button" class="tox-tbtn tox-tbtn--labeled tox-tbtn--ipm-alert">
-                <span class="tox-tbtn__select-label">Api key missing</span>
-                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m18.55 5.95c-1.95-1.95-5.15-1.95-7.1.05-1.2 1.2-1.7 2.9-1.35 4.55l-.55.3c-.1.05-.15.2-.1.35 0 0 .05.05.05.05l.45.45-.4.4h-.5c-.15 0-.25.1-.25.25v.5l-.5.5h-.5c-.15 0-.25.1-.25.25v.5l-.5.5h-.55c-.15 0-.25.1-.25.25v.5l-1.15 1.15c-.05.1-.1.15-.1.25v2.5c0 .1.1.25.25.25h2.5c.05 0 .15-.05.15-.05l4.85-4.85.45.45c.05.05.15.1.2.05.1 0 .15-.05.2-.15l.3-.55c2.7.6 5.35-1.15 5.95-3.85.35-1.65-.15-3.4-1.3-4.6zm-6.6 7-4.5 4.5c-.1.1-.25.1-.35 0s-.1-.25 0-.35l4.5-4.5c.1-.1.25-.1.35 0 .1.05.1.25 0 .35zm4.55-3.45c-.85 0-1.5-.65-1.5-1.5s.65-1.5 1.5-1.5 1.5.65 1.5 1.5-.65 1.5-1.5 1.5z"/></svg>
-            </button> -->
-
-            <!-- General alert -->
-            <!-- <button type="button" class="tox-tbtn tox-tbtn--labeled tox-tbtn--ipm-alert">
-                <span class="tox-tbtn__select-label">Quota exceeded</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>icon-ipm-alert</title><path d="M19.787 18.313c.26.458.294.854.102 1.187-.193.333-.555.5-1.086.5H5.209c-.531 0-.893-.167-1.086-.5-.193-.333-.159-.73.101-1.188l6.829-13.609c.135-.24.283-.417.445-.531A.864.864 0 0 1 12.006 4c.177 0 .346.057.508.172.161.114.31.292.445.531l6.828 13.61zM12.006 18a.966.966 0 0 0 .71-.29.966.966 0 0 0 .29-.71.966.966 0 0 0-.29-.71.966.966 0 0 0-.71-.29.966.966 0 0 0-.711.29.966.966 0 0 0-.29.71c0 .281.097.518.29.71.193.194.43.29.71.29zm.687-3l.313-4a.966.966 0 0 0-.29-.71.966.966 0 0 0-.71-.29.966.966 0 0 0-.711.29.966.966 0 0 0-.29.71l.313 4h1.375z" fill-rule="evenodd"/></svg>
-            </button> -->
-
-            <!-- News -->
-            <!-- <button type="button" class="tox-tbtn tox-tbtn--ipm-news">
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>icon-ipm-news</title><g transform="translate(3 2)" fill="none"><path d="M10.492 6.978H7.507A6.883 6.883 0 0 1 3.726 5.24a2.512 2.512 0 0 1 0-3.53 2.538 2.538 0 0 1 3.52 0c.52.523 1.9 2.648 1.71 4.067h.085c-.189-1.418 1.191-3.545 1.712-4.069a2.536 2.536 0 0 1 3.52 0 2.51 2.51 0 0 1 0 3.53 6.877 6.877 0 0 1-3.781 1.739zm0-1.2a5.898 5.898 0 0 0 2.929-1.383 1.292 1.292 0 1 0-1.817-1.835c-.809.814-1.613 2.892-1.333 3.182a.397.397 0 0 0 .22.036zm-5.004-3.6c-.342-.001-.67.135-.91.379a1.308 1.308 0 0 0 0 1.838 5.903 5.903 0 0 0 2.93 1.383.406.406 0 0 0 .221-.039c.28-.291-.529-2.37-1.333-3.179a1.274 1.274 0 0 0-.908-.383z" fill="#F1C40F"/><path d="M1 9.981v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9H1z" fill="#D34739"/><path d="M17 6.981H1a1 1 0 0 0-1 1v2.5a.5.5 0 0 0 .5.5h17a.5.5 0 0 0 .5-.5v-2.5a1 1 0 0 0-1-1z" fill="#EE6556"/><path fill="#F1C40F" d="M8 6.981L10 6.981 10 19.981 8 19.981z"/><path fill="#F1C40F" d="M0.943286673 13.7010512L16.8824018 12.3065594 17.0567133 14.2989488 1.11759816 15.6934406z"/></g></svg>
-            </button> -->
-
-            <!-- About Tiny -->
-            <!-- <button type="button" class="tox-tbtn tox-tbtn--ipm-tiny">
-                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="m0 0h24v24h-24z"/><path d="m4 13 8 8 10-10" stroke="#1a76d2" stroke-linecap="square" stroke-width="1.5"/><path d="m2 4 10 10 8-8" stroke="#1a76d2" stroke-linecap="square" stroke-width="1.5" transform="matrix(1 0 0 -1 0 18)"/><path d="m10 9h4v1h-4zm0 6h4v1h-4zm-2-2h8v1h-8zm0-2h8v1h-8z" fill="#1a76d2"/></g></svg>
-            </button> -->
-
+        <div class="tox-edit-area">
+            <iframe class="tox-edit-area__iframe" src="editor-content.html">
+                <p>Hello</p>
+            </iframe>
         </div>
-    </div>
-
-    <div class="tox-edit-area" style="height: 340px">
-        <iframe class="tox-edit-area__iframe" src="editor-content.html">
-            <p>Hello</p>
-        </iframe>
     </div>
 </div>

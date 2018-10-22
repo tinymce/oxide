@@ -10,49 +10,6 @@
     };
   };
 
-  // const hints = function(codeMirror) {
-  //   // Code found in xmlcomplete demo
-  //   // https://github.com/codemirror/CodeMirror/blob/master/demo/xmlcomplete.html
-  //   const completeAfter = function(cm, pred) {
-  //     if (!pred || pred()) {
-  //       setTimeout(function() {
-  //         if (!cm.state.completionActive) {
-  //           cm.showHint({ completeSingle: false });
-  //         }
-  //       }, 100);
-  //     }
-  //     return codeMirror.Pass;
-  //   };
-
-  //   const completeIfAfterLt = function(cm) {
-  //     return completeAfter(cm, function() {
-  //       const cur = cm.getCursor();
-  //       return cm.getRange(codeMirror.Pos(cur.line, cur.ch - 1), cur) === '<';
-  //     });
-  //   };
-
-  //   const completeIfInTag = function(cm) {
-  //     return completeAfter(cm, function() {
-  //       const tok = cm.getTokenAt(cm.getCursor());
-  //       if (
-  //         tok.type === 'string' &&
-  //         (!/['"]/.test(tok.string.charAt(tok.string.length - 1)) ||
-  //           tok.string.length === 1)
-  //       ) {
-  //         return false;
-  //       }
-  //       const inner = codeMirror.innerMode(cm.getMode(), tok.state).state;
-  //       return inner.tagName;
-  //     });
-  //   };
-
-  //   return {
-  //     completeAfter,
-  //     completeIfAfterLt,
-  //     completeIfInTag
-  //   };
-  // };
-
   const defaultVars = {
     'background-color': '#fff',
     'base-value': '16px',
@@ -65,7 +22,7 @@
 
   const getData = () => {
     if (localStorage.getItem('tinymce-oxide-skin-vars') !== null) {
-      const variables = JSON.parse(
+      const variables = parse(
         localStorage.getItem('tinymce-oxide-skin-vars')
       );
       less.modifyVars(variables);
@@ -98,33 +55,37 @@
     };
   };
 
-  // const h = hints(CodeMirror);
+  const regex = /(^[^:]+\s*): ([^;]*);/;
+  const stringify = obj => Object.keys(obj).reduce((acc, key) => acc + `${key}: ${obj[key]};\n`, '');
+  const parse = str => str.split('\n').reduce((acc, line) => {
+    const match = regex.exec(line);
+    console.log(line, match)
+    if (match) {
+      acc[match[1]] = match[2];    
+    }
+    return acc;    
+  }, {})
 
   const editor_json = CodeMirror.fromTextArea(document.getElementById('code'), {
     lineNumbers: false,
-    mode: 'application/json',
-    gutters: ['CodeMirror-lint-markers'],
+    mode: 'text/css',
     lint: true,
     theme: 'material',
     extraKeys: {
-      'Ctrl-.': 'autocomplete',
-      // '"': h.completeAfter,
-      // '"': h.completeIfAfterLt,
-      // '"': h.completeIfInTag,
-      // '"': h.completeIfInTag,
+      'Ctrl-.': 'autocomplete'
     },
     hintOptions: { hint: findHint }
   });
   const data = getData();
-  editor_json.setValue(JSON.stringify(data, 0, 2));
+  editor_json.setValue(stringify(data, 0, 2));
   editor_json.on(
     'change',
     debounce((cm) => {
       const val = cm.getValue();
-      const lintingErrors = CodeMirror.lint.json(val);
-      if (lintingErrors.length === 0) {
-        localStorage.setItem('tinymce-oxide-skin-vars', val);
-        less.modifyVars(JSON.parse(val));
+      const json = parse(val);
+      if (Object.keys(json).length !== 0) {
+        localStorage.setItem('tinymce-oxide-skin-vars', stringify(json));
+        less.modifyVars(json);
       }
     }, 1500)
   );
@@ -133,7 +94,7 @@
   button.addEventListener('click', () => {
     localStorage.clear();
     const data = getData();
-    editor_json.setValue(JSON.stringify(data, 0, 2));
+    editor_json.setValue(stringify(data));
   });
 
   // Set up split.js for resizable panes

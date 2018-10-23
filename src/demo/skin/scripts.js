@@ -58,9 +58,7 @@
     'base-value': '16px',
     'color-black': '#222f3e',
     'color-tint': '#3498db',
-    'color-white': '#fff',
-    'font-stack':
-      "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif"
+    'color-white': '#fff'
   };
 
   const getData = () => {

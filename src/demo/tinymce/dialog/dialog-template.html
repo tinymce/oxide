@@ -1,46 +1,31 @@
 <div class="tox tox-tinymce-aux">
-        <div class="tox-dialog" role="dialog" tabindex="-1">
-            <div class="tox-dialog__header" role="presentation">
-                <div>
-                    Dialog title
+    <div class="tox-dialog">
+        <div class="tox-dialog__header" role="presentation">
+            <span class="tox-dialog__title">Dialog title</span>
+            <div class="tox-dialog__draghandle"></div>
+            <button type="button" class="tox-button tox-button--icon tox-button--naked">
+                <div class="tox-icon">
+                    <svg data-name="icon-close"></svg>
                 </div>
-                <!--Is draghandle required?-->
-                <div class="tox-dialog__draghandle">
-                    </div>
-                <!--Cancel icon-->
-                <button class="tox-button tox-button--icon tox-button--naked" role="button" tabindex="-1" type="button">
-                    <div class="tox-icon">
-                        <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.953 7.453L13.422 12l4.531 4.547-1.406 1.406L12 13.422l-4.547 4.531-1.406-1.406L10.578 12 6.047 7.453l1.406-1.406L12 10.578l4.547-4.531z" fill-rule="evenodd"></path></svg>
-                    </div>
-                </button>
-                <!--End cancel icon-->
-            </div>
-            <!--End header-->
-            <div class="tox-dialog__content-js">
-                <div class="tox-dialog__body">
-                    <div class="tox-dialog__body-nav" role="tablist">
-                        <div class="tox-tab tox-dialog__body-nav-item tox-dialog__body-nav-item--active" role="tab" tabindex="-1">
-                            Navigation placeholder 1
-                        </div>
-                        <div class="tox-tab tox-dialog__body-nav-item" role="tab" tabindex="-1">
-                            Navigation placeholder 2
-                        </div>
-                        <div class="tox-tab tox-dialog__body-nav-item" role="tab" tabindex="-1">
-                            Navigation placeholder 3
-                        </div>
-                    </div>
-                    <div class="tox-dialog__body-content" role="tabpanel">
-                        <!--Dialog body content-->
-                    </div>
-                </div>
-            </div>
-            <div class="tox-dialog__footer">
-                <div class="tox-dialog__footer-start" role="presentation"></div>
-                <div class="tox-dialog__footer-end" role="presentation">
-                    <button class="tox-button" role="button" tabindex="-1" type="button">Ok</button>
-                    <button class="tox-button tox-button--secondary" role="button" tabindex="-1" type="button">Close</button>
-                </div>
+            </button>
+        </div>
+
+        <div class="tox-dialog__body">
+            <nav class="tox-dialog__body-nav">
+                <a href="#" class="tox-dialog__body-nav-item tox-dialog__body-nav-item--active">Tab 1</a>
+                <a href="#" class="tox-dialog__body-nav-item">Tab 2</a>
+            </nav>
+
+            <div class="tox-dialog__body-content">
+                <!--Dialog body content-->
             </div>
         </div>
     </div>
+    <div class="tox-dialog__footer">
+        <div class="tox-dialog__footer-start"></div>
+        <div class="tox-dialog__footer-end">
+            <button class="tox-button" type="button">Ok</button>
+            <button class="tox-button tox-button--secondary" type="button">Close</button>
+        </div>
+    </div>
+</div>

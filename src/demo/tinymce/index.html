@@ -234,6 +234,14 @@
             <p>Color field</p>
             @@include('forms/colorfield.html')
         </article>
+
+        <article>
+            <p>Size input</p>
+            <!-- This is a reused component so `.tox` wrapper class is located outside of the component -->
+            <div class="tox tox-tinymce-aux">
+                @@include('forms/size-input.html')
+            </div>
+        </article>
     </section>
 
     <section class="demo-section">

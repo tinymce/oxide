@@ -18,12 +18,15 @@
     'color-white': '#fff'
   };
 
+  const changeBodyBackground = (data) => document.body.style.backgroundColor = data['site-background-color'] || null;
+
   const getData = () => {
     if (localStorage.getItem('tinymce-oxide-skin-vars') !== null) {
       const variables = parse(
         localStorage.getItem('tinymce-oxide-skin-vars')
       );
       less.modifyVars(variables);
+      changeBodyBackground(variables);
 
       return variables;
     } else {
@@ -31,10 +34,15 @@
     }
   };
 
+  const json = fetch('/skin/less-variables.json').then((x) => {
+    return x.json();
+  })
+
   const findMatch = (term) => {
-    return fetch('/skin/less-variables.json')
-      .then((x) => x.json())
-      .then((val) => Object.keys(val).filter((s) => s.includes(term)));
+    return json.then((val) => {
+      const allVals = {...val, 'site-background-color': '#fff'};
+      return Object.keys(allVals).filter((s) => s.includes(term));
+    });
   };
 
   const findHint = async (cm, option) => {
@@ -57,7 +65,6 @@
   const stringify = obj => Object.keys(obj).reduce((acc, key) => acc + `${key}: ${obj[key]};\n`, '');
   const parse = str => str.split('\n').reduce((acc, line) => {
     const match = regex.exec(line);
-    console.log(line, match)
     if (match) {
       acc[match[1]] = match[2];    
     }
@@ -84,6 +91,7 @@
       if (Object.keys(json).length !== 0) {
         localStorage.setItem('tinymce-oxide-skin-vars', stringify(json));
         less.modifyVars(json);
+        changeBodyBackground(json);
       }
     }, 1500)
   );

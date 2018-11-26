@@ -32,7 +32,7 @@ module.exports = (port) => {
           "body"
         ],
         "readyEvent": "backstopjs_ready",
-        "delay": 5000,
+        "delay": 500,
         "misMatchThreshold": 0.1,
         "viewports": [
           {

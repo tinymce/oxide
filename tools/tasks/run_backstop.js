@@ -12,7 +12,8 @@ module.exports = (browserSync, done, command) => {
   browserSync.init({
     server: { baseDir: './build' },
     ghostMode: false, // prevent scrolls and clicks between browsers
-    open: false // Don't open a browser by default.
+    open: false, // Don't open a browser by default.
+    notify: false
   }, (err, bs) => {
     const port = bs.options.get('port');
     const config = createConfig(port);

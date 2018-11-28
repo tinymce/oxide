@@ -7,12 +7,15 @@
     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Merriweather:400,400i,700,700i" rel="stylesheet">
     <script src="/scripts.js"></script>
     <script src="//devpreview.tiny.cloud/demo/tinymce.min.js"></script>
+    @@include('_skin-switcher-script.html')
     <script>
         tinymce.init({
             selector:'article',
             inline: true,
+            toolbar: false,
+            menubar: false,
             plugins: 'inlite advlist anchor autolink charmap code codesample colorpicker contextmenu directionality fullpage fullscreen help hr image imagetools insertdatetime link lists nonbreaking pagebreak preview print searchreplace table template textcolor textpattern toc visualblocks visualchars wordcount',
-            skin_url: '/skins/oxide-default',
+            skin_url: '/skins/' + skin,
         });
     </script>
     <style>

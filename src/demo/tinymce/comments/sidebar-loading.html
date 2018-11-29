@@ -1,0 +1,38 @@
+<div class="tox tox-tinymce-aux">
+    <div class="tox-sidebar" style="height: 500px">
+      <div class="tox-sidebar__slider tox-sidebar--sliding-open">
+        <div class="tox-sidebar__pane-container">
+          <div class="tox-sidebar__pane">
+            <div class="tox-conversations" style="position: relative;  display: flex; flex-direction: column;">
+              <div style="z-index: 100; position: relative;"></div>
+              <div class="tox-comment__scroll">
+                <div data-alloy-tabstop="true" class="tox-comment-thread">
+                  @@include('card-regular1.html')
+                  @@include('card-regular2.html')
+                  @@include('card-delete.html')
+                  @@include('card-edit.html')
+                  @@include('card-expanded.html')
+                  @@include('card-collapsed.html')
+                </div>
+                <div class="tox-dialog__busy-spinner">
+                    <div class="tox-loading-text">
+                        <div>
+                        <p>Comments are loading</p>
+                        </div>
+                    <div class="tox-spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+                </div>
+              </div>
+              <div class="tox-comment__reply"><textarea type="input" rows="2" placeholder="Say something ..." class="tox-textarea"
+                style="white-space: pre-wrap;"></textarea><button type="button" class="tox-button tox-button--secondary">Clear</button><button
+                type="button" class="tox-button">Save</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

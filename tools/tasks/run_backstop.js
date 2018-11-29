@@ -1,6 +1,5 @@
 const backstop = require('backstopjs');
 const fs = require('fs');
-const path = require('path');
 const createConfig = require('./backstop_config');
 
 
@@ -17,6 +16,9 @@ module.exports = (browserSync, done, command) => {
   }, (err, bs) => {
     const port = bs.options.get('port');
     const config = createConfig(port);
+    if (!fs.existsSync('scratch')) {
+      fs.mkdirSync('scratch');
+    }
     const configPath = 'scratch/backstop.json';
     fs.writeFileSync(configPath, JSON.stringify(config))
     backstop(command, { docker: true, config: configPath })

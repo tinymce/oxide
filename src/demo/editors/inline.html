@@ -5,6 +5,7 @@
     <title>Inline editor demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="//devpreview.tiny.cloud/demo/tinymce.min.js"></script>
+    <script src="skin-switcher-script.js"></script>
     <script>
         tinymce.init({
             selector:'.editable-block',
@@ -15,7 +16,7 @@
              {title: 'Button', inline: 'a', classes: 'button'},
              {title: 'Primary Button', inline: 'a', classes: 'button primary-button'},
             ],
-            skin_url: '/skins/oxide-dark',
+            skin_url: '/skins/' + skin,
         });
     </script>
     <style>

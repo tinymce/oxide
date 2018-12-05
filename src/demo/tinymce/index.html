@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/skins/oxide-default/skin.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../skins/oxide-default/skin.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="/scripts.js"></script>
+    <script src="../scripts.js"></script>
 </head>
 <body>
     <h1>TinyMCE Oxide theme for Alloy</h1>
@@ -117,6 +117,16 @@
             <p>Insert table picker</p>
             @@include('menu/insert-table.html')
         </article>
+    </section>
+
+    <section class="demo-section">
+      <header>
+          <h2>Checkbox</h2>
+      </header>
+
+      <article>
+          @@include('bar/bar.html')
+      </article>
     </section>
 
     <section class="demo-section">
@@ -325,6 +335,10 @@
 
         <article style="flex-basis: 100%;">
             @@include('dialog/dialog-9.html')
+        </article>
+
+        <article>
+            @@include('dialog/dialog-codeeditor-wrapper.html')
         </article>
     </section>
 

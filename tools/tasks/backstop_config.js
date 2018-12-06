@@ -23,6 +23,7 @@ module.exports = (port) => {
         "delay": 5000,
         "misMatchThreshold": 0.1
       },
+
       {
         "label": "Test toolbar separation",
         "url": `http://host.docker.internal:${port}/tests/test-toolbar-separation.html`,
@@ -40,8 +41,18 @@ module.exports = (port) => {
             "height": 440
           }
         ]
-      }
+      },
 
+      {
+        "label": "Test Tiny Comments for TinyMCE 4",
+        "url": `http://host.docker.internal:${port}/tests/test-plugin-tinycomments-tinymce4.html`,
+        "viewports": [
+          {
+            "width": 1440,
+            "height": 1800
+          }
+        ]
+      }
     ],
     "paths": {
       "bitmaps_reference": "./backstop_data/bitmaps_reference",

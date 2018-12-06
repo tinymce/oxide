@@ -5,7 +5,7 @@ module.exports = (port) => {
       {
         "label": "desktop",
         "width": 1280,
-        "height": 7020
+        "height": 15000
       }
     ],
     "onBeforeScript": "puppet/onBefore.js",

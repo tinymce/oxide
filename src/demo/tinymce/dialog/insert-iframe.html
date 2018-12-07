@@ -1,0 +1,49 @@
+<div class="tox-dialog">
+    <div class="tox-dialog__header" role="presentation">
+        <div class="tox-dialog__title">Insert/Edit Iframe</div>
+        <div class="tox-dialog__draghandle"></div>
+        <button type="button" class="tox-button tox-button--icon tox-button--naked">
+            <div class="tox-icon">
+                <svg data-name="icon-close"></svg>
+            </div>
+        </button>
+    </div>
+
+    <div class="tox-dialog__body">
+        <nav class="tox-dialog__body-nav">
+            <a href="#" class="tox-dialog__body-nav-item tox-dialog__body-nav-item--active">General</a>
+            <a href="#" class="tox-dialog__body-nav-item">Advanced</a>
+        </nav>
+
+        <div class="tox-dialog__body-content">
+            <div class="tox-form">
+                <div class="tox-form__group">
+                    <label class="tox-label">Source</label>
+                    <input type="text" class="tox-textfield">
+                </div>
+
+                <div class="tox-form__group">
+                    <label class="tox-label">Size</label>
+                    <div class="tox-selectfield">
+                        <select>
+                            <option>Inline Value</option>
+                            <option>...</option>
+                            <option>...</option>
+                        </select>
+                        <svg data-name="icon-chevron-down"></svg>
+                    </div>
+                </div>
+
+                @@include('../forms/size-input.html')
+            </div>
+        </div>
+    </div>
+
+    <div class="tox-dialog__footer">
+        <div class="tox-dialog__footer-start"></div>
+        <div class="tox-dialog__footer-end">
+            <button class="tox-button tox-button--secondary" type="button">Cancel</button>
+            <button class="tox-button" type="button">Save</button>
+        </div>
+    </div>
+</div>

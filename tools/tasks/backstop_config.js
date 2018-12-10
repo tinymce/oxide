@@ -4,8 +4,8 @@ module.exports = (port) => {
     "viewports": [
       {
         "label": "desktop",
-        "width": 1280,
-        "height": 7020
+        "width": 1440,
+        "height": 900
       }
     ],
     "onBeforeScript": "puppet/onBefore.js",
@@ -14,34 +14,30 @@ module.exports = (port) => {
       {
         "label": "demo page",
         "url": `http://host.docker.internal:${port}/tinymce/index.html`,
-        "hideSelectors": [],
-        "removeSelectors": [],
-        "selectors": [
-          "body"
-        ],
-        "readyEvent": null,
-        "delay": 5000,
-        "misMatchThreshold": 0.1
+        "hideSelectors": [
+          ".tox-spinner"
+        ]
       },
+
       {
         "label": "Test toolbar separation",
         "url": `http://host.docker.internal:${port}/tests/test-toolbar-separation.html`,
-        "hideSelectors": [],
-        "removeSelectors": [],
-        "selectors": [
-          "body"
-        ],
         "readyEvent": "backstopjs_ready",
-        "delay": 500,
-        "misMatchThreshold": 0.1,
         "viewports": [
           {
             "width": 800,
             "height": 440
           }
         ]
-      }
+      },
 
+      {
+        "label": "Test Tiny Comments for TinyMCE 4",
+        "url": `http://host.docker.internal:${port}/tests/test-plugin-tinycomments-tinymce4.html`,
+        "hideSelectors": [
+          ".tox-spinner"
+        ]
+      }
     ],
     "paths": {
       "bitmaps_reference": "./backstop_data/bitmaps_reference",

@@ -13,12 +13,16 @@
 <body style="height: 100vh; margin: 0; padding: 0">
     <h1 style="margin: 0;">Dialog positioning</h1>
 
-    <!-- A wrapper around all dialogs. -->
-    <div class="tox tox-dialog-wrap">
-        <!-- Backdrop element. -->
-        <div class="tox-dialog-wrap__backdrop"></div>
+    <div class="tox tox-tinymce-aux">
+        <!-- A wrapper around all dialogs. -->
+        <div class="tox tox-dialog-wrap">
+            <!-- Backdrop element. -->
+            <div class="tox-dialog-wrap__backdrop"></div>
 
-        <!-- The dialog element. -->
-        @@include('dialog/dialog-11.html')
+            <!-- The dialog element. -->
+            @@include('dialog/blocked.html')
+        </div>
     </div>
+
+    <script src="../iconManager.js"></script>
 </body>

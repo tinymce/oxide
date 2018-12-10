@@ -66,9 +66,9 @@
   const parse = str => str.split('\n').reduce((acc, line) => {
     const match = regex.exec(line);
     if (match) {
-      acc[match[1]] = match[2];    
+      acc[match[1]] = match[2];
     }
-    return acc;    
+    return acc;
   }, {})
 
   const editor_json = CodeMirror.fromTextArea(document.getElementById('code'), {

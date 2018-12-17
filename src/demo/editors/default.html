@@ -15,7 +15,7 @@
             toolbar: 'undo redo | formatselect | bold italic strikethrough forecolor backcolor blockquote | link image media | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat fullscreen',
             height: 700,
             skin_url: '/skins/' +  skin,
-            // content_css: '/skins/content-skins/scrapbook.css'
+            content_css: (contentcss ? '/skins/content/'+contentcss+'/content.css' : false)
         });
     </script>
     <style>

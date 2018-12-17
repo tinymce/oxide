@@ -12,14 +12,6 @@ module.exports = (port) => {
     "onReadyScript": "puppet/onReady.js",
     "scenarios": [
       {
-        "label": "demo page",
-        "url": `http://host.docker.internal:${port}/tinymce/index.html`,
-        "hideSelectors": [
-          ".tox-spinner"
-        ]
-      },
-
-      {
         "label": "Test toolbar separation",
         "url": `http://host.docker.internal:${port}/tests/test-toolbar-separation.html`,
         "readyEvent": "backstopjs_ready",

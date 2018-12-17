@@ -37,6 +37,21 @@ module.exports = (port) => {
         "hideSelectors": [
           ".tox-spinner"
         ]
+      },
+
+      {
+        "label": "Test Collections",
+        "url": `http://host.docker.internal:${port}/tests/test-collections.html`,
+      },
+
+      {
+        "label": "Test Collections skinning 1",
+        "url": `http://host.docker.internal:${port}/tests/test-collections-skinning-1.html`,
+      },
+
+      {
+        "label": "Test Collections skinning 2",
+        "url": `http://host.docker.internal:${port}/tests/test-collections-skinning-2.html`,
       }
     ],
     "paths": {

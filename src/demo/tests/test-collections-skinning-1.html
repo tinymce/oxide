@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet/less" type="text/css" href="../skin/theme/theme.less" />
+    <script src="../skin/less.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        less.modifyVars({
+            "collection-list-item-enabled-background-color": "#2980b9",
+            "collection-list-item-active-background-color": "#3498db",
+            "collection-toolbar-item-enabled-background-color": "#c0392b",
+            "collection-toolbar-item-active-background-color": "#e74c3c",
+            "collection-grid-item-enabled-background-color": "#16a085",
+            "collection-grid-item-active-background-color": "#1abc9c",
+            "menu-background-color": "#f2f2f2",
+        }).then(x => {
+            console.log('backstopjs_ready')
+        })
+    </script>
+</head>
+<body>
+    <section class="demo-section">
+        <header>
+            <h2>Menus</h2>
+            <p>Active and enabled state should be inverted</p>
+        </header>
+
+        <article>
+            <p>Menu with icons</p>
+            @@include('../tinymce/menu/collection-list.html')
+        </article>
+
+        <article>
+            <p>Autocomplete dropdown list</p>
+            @@include('../tinymce/menu/collection-autocomplete.html')
+        </article>
+
+        <article>
+            <p>Menu with collection toolbar</p>
+            @@include('../tinymce/menu/collection-toolbar.html')
+        </article>
+
+        <article style="max-width: 362px;">
+            <p>Menu with collection grid</p>
+            @@include('../tinymce/menu/collection-grid.html')
+        </article>
+
+        <article>
+            <p>Swatch picker</p>
+            @@include('../tinymce/menu/swatch-picker.html')
+        </article>
+
+        <article>
+            <p>Insert table picker</p>
+            @@include('../tinymce/menu/insert-table.html')
+        </article>
+    </section>
+
+    <script src="../iconManager.js"></script>
+</body>
+</html>

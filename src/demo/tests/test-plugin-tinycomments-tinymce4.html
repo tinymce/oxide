@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../skins/plugin-tinycomments-tinymce4/plugin-tinycomments-tinymce4.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Tiny Comments styles for TinyMCE 4</h1>
+    <p>The styles are found in <code>src/less/skins/plugin-tinycomments-tinymce4/</code> and loads in a subset of the oxide theme.
+    <section class="demo-section">
+        <header>
+            <h2>Tiny Comments</h2>
+        </header>
+
+        <article style="flex-basis: 300px;">
+            <p>Comment thread</p>
+            @@include('../tinymce/comments/comments.html')
+        </article>
+        <article style="flex-basis: 300px;">
+            <p>Comment with 'show more' and 'show less'</p>
+            @@include('../tinymce/comments/comments-show-more-less.html')
+        </article>
+        <article style="flex-basis: 300px;">
+            <p>Edit comment</p>
+            @@include('../tinymce/comments/comments-edit.html')
+        </article>
+        <article style="flex-basis: 300px;">
+            <p>Delete comment</p>
+            @@include('../tinymce/comments/comments-delete.html')
+        </article>
+        <article style="flex-basis: 300px;">
+            <p>Delete conversation</p>
+            @@include('../tinymce/comments/comments-delete-conversation.html')
+        </article>
+        <article style="flex-basis: 300px;">
+            <p>Conversations Sidebar</p>
+            @@include('../tinymce/comments/sidebar.html')
+        </article>
+        <article style="flex-basis: 300px;">
+            <p>Loading Sidebar</p>
+            @@include('../tinymce/comments/sidebar-loading.html')
+        </article>
+    </section>
+    <script src="../iconManager.js"></script>
+</body>
+</html>

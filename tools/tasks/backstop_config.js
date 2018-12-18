@@ -12,6 +12,42 @@ module.exports = (port) => {
     "onReadyScript": "puppet/onReady.js",
     "scenarios": [
       {
+        "label": "Test Dialogs",
+        "url": `http://host.docker.internal:${port}/tests/test-dialogs.html`,
+        "hideSelectors": [
+          ".tox-spinner"
+        ]
+      },
+
+      {
+        "label": "Test editor oxide markup",
+        "url": `http://host.docker.internal:${port}/tests/test-editor-oxide-markup.html`,
+      },
+
+      {
+        "label": "Test form layout",
+        "url": `http://host.docker.internal:${port}/tests/test-form-layout.html`,
+      },
+
+      {
+        "label": "Test forms",
+        "url": `http://host.docker.internal:${port}/tests/test-forms.html`,
+      },
+
+      {
+        "label": "Test menus",
+        "url": `http://host.docker.internal:${port}/tests/test-menus.html`,
+      },
+
+      {
+        "label": "Test Tiny Comments for TinyMCE 4",
+        "url": `http://host.docker.internal:${port}/tests/test-plugin-tinycomments-tinymce4.html`,
+        "hideSelectors": [
+          ".tox-spinner"
+        ]
+      },
+
+      {
         "label": "Test toolbar separation",
         "url": `http://host.docker.internal:${port}/tests/test-toolbar-separation.html`,
         "readyEvent": "backstopjs_ready",
@@ -22,14 +58,6 @@ module.exports = (port) => {
           }
         ]
       },
-
-      {
-        "label": "Test Tiny Comments for TinyMCE 4",
-        "url": `http://host.docker.internal:${port}/tests/test-plugin-tinycomments-tinymce4.html`,
-        "hideSelectors": [
-          ".tox-spinner"
-        ]
-      }
     ],
     "paths": {
       "bitmaps_reference": "./backstop_data/bitmaps_reference",

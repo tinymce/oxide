@@ -230,6 +230,26 @@
         </header>
 
         <article>
+            <p>Primary button</p>
+            @@include('forms/primary-button.html')
+        </article>
+
+        <article>
+            <p>Secondary button</p>
+            @@include('forms/secondary-button.html')
+        </article>
+
+        <article>
+            <p>Icon button</p>
+            @@include('forms/icon-button.html')
+        </article>
+
+        <article>
+            <p>Naked button</p>
+            @@include('forms/naked-button.html')
+        </article>
+
+        <article>
             <p>Control wrap</p>
             @@include('forms/control-wrap.html')
         </article>
@@ -294,13 +314,13 @@
 
         <article>
             <div class="tox tox-tinymce-aux">
-                @@include('dialog/insert-iframe.html')
+                @@include('dialog/page-embed.html')
             </div>
         </article>
 
         <article>
             <div class="tox tox-tinymce-aux">
-                @@include('dialog/insert-iframe-advanced.html')
+                @@include('dialog/page-embed-advanced.html')
             </div>
         </article>
 
@@ -432,6 +452,17 @@
             @@include('comments/sidebar-loading.html')
         </article>
     </section>
+
+    <section class="demo-section">
+        <header>
+            <h2>Animations</h2>
+        </header>
+        <article style="flex-basis: 300px;">
+            <p>Animations</p>
+            @@include('comments/comments-animations-delete-comment.html')
+        </article>
+    </section>
+
     <script src="../iconManager.js"></script>
 </body>
 </html>

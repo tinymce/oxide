@@ -3,4 +3,5 @@
 // Available skins are located in ./build/skins/
 let url = new URL (window.location.href);
 let skin = url.searchParams.get('skin');
+let contentcss = url.searchParams.get('contentcss');
 if (!skin) skin = 'oxide-default';

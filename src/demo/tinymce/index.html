@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../skins/oxide-default/skin.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../skins/plugin-tinycomments-tinymce4/plugin-tinycomments-tinymce4.css" />
     <script src="../scripts.js"></script>
 </head>
 <body>
@@ -232,6 +231,26 @@
         </header>
 
         <article>
+            <p>Primary button</p>
+            @@include('forms/primary-button.html')
+        </article>
+
+        <article>
+            <p>Secondary button</p>
+            @@include('forms/secondary-button.html')
+        </article>
+
+        <article>
+            <p>Icon button</p>
+            @@include('forms/icon-button.html')
+        </article>
+
+        <article>
+            <p>Naked button</p>
+            @@include('forms/naked-button.html')
+        </article>
+
+        <article>
             <p>Control wrap</p>
             @@include('forms/control-wrap.html')
         </article>
@@ -296,13 +315,13 @@
 
         <article>
             <div class="tox tox-tinymce-aux">
-                @@include('dialog/insert-iframe.html')
+                @@include('dialog/page-embed.html')
             </div>
         </article>
 
         <article>
             <div class="tox tox-tinymce-aux">
-                @@include('dialog/insert-iframe-advanced.html')
+                @@include('dialog/page-embed-advanced.html')
             </div>
         </article>
 

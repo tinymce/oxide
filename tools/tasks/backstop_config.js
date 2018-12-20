@@ -35,8 +35,15 @@ module.exports = (port) => {
       },
 
       {
-        "label": "Test menus",
-        "url": `http://host.docker.internal:${port}/tests/test-menus.html`,
+        "label": "Test toolbar separation",
+        "url": `http://host.docker.internal:${port}/tests/test-toolbar-separation.html`,
+        "readyEvent": "backstopjs_ready",
+        "viewports": [
+          {
+            "width": 800,
+            "height": 440
+          }
+        ]
       },
 
       {
@@ -48,16 +55,19 @@ module.exports = (port) => {
       },
 
       {
-        "label": "Test toolbar separation",
-        "url": `http://host.docker.internal:${port}/tests/test-toolbar-separation.html`,
-        "readyEvent": "backstopjs_ready",
-        "viewports": [
-          {
-            "width": 800,
-            "height": 440
-          }
-        ]
+        "label": "Test Collections",
+        "url": `http://host.docker.internal:${port}/tests/test-collections.html`,
       },
+
+      {
+        "label": "Test Collections skinning 1",
+        "url": `http://host.docker.internal:${port}/tests/test-collections-skinning-1.html`,
+      },
+
+      {
+        "label": "Test Collections skinning 2",
+        "url": `http://host.docker.internal:${port}/tests/test-collections-skinning-2.html`,
+      }
     ],
     "paths": {
       "bitmaps_reference": "./backstop_data/bitmaps_reference",

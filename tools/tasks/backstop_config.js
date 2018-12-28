@@ -67,7 +67,12 @@ module.exports = (port) => {
       {
         "label": "Test Collections skinning 2",
         "url": `http://host.docker.internal:${port}/tests/test-collections-skinning-2.html`,
-      }
+      },
+
+      {
+        "label": "Test Toolbar button states – default",
+        "url": `http://host.docker.internal:${port}/tests/test-toolbar-button-states.html`,
+      },
     ],
     "paths": {
       "bitmaps_reference": "./backstop_data/bitmaps_reference",

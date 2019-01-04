@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) Tiny Technologies, Inc. All rights reserved.
+ * Licensed under the LGPL or a commercial license.
+ * For LGPL see License.txt in the project root for license information.
+ * For commercial licenses see https://www.tiny.cloud/
+ */
+
 var tinymce = {};
 
 tinymce.IconManager = (function() {
@@ -57,12 +64,12 @@ tinymce.IconManager = (function() {
         option.innerText = key;
         select.appendChild(option);
       });
-      
+
       select.value = tinymce.IconManager.getActiveIconPack();
       select.addEventListener('change', function (e) {
         tinymce.IconManager.setActiveIconPack(e.target.value);
       });
-      
+
       iconPacker.appendChild(select);
     }
   })

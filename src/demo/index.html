@@ -3,18 +3,104 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>TinyMCE skin for silver theme SDK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            color: #555;
+            display: grid;
+            fill: #555;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+            grid-gap: 10%;
+            grid-template-columns: repeat(2, 1fr);
+            margin: auto;
+            max-width: 760px;
+            padding: 1rem;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+            padding: 2rem 10%;
+            text-align: center;
+        }
+
+        header p {
+            font-size: 1.25rem;
+        }
+
+        section {
+            margin: 1rem 0;
+        }
+
+        footer {
+            color: #999;
+            font-size: .875rem;
+            grid-column: 1 / -1;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        h2 {
+            border-bottom: 3px solid #eee;
+            font-size: 1.5rem;
+            font-weight: normal;
+            padding-bottom: .5rem;
+        }
+
+        nav a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-    <ul>
-        <li><a href="/tinymce/">TinyMCE Oxide theme for Alloy</a></li>
-        <li><a href="/editors/default.html">Working default editor</a></li>
-        <li><a href="/editors/inline.html">Working inline editor</a></li>
-        <li><a href="/editors/distraction-free.html">Working distraction free editor</a></li>
-        <li><a href="/skin/">Skin tool</a></li>
-        <li><a href="/tests/test-toolbar-separation.html">Test toolbar separation</a></li>
-    </ul>
+    <header>
+        <svg width="112" height="96" xmlns="http://www.w3.org/2000/svg"><g><path d="M45 31L67 31 67 36 45 36z"/><path d="M45 61L67 61 67 66 45 66z"/><path d="M37 51L74 51 74 56 37 56z"/><path d="M37 41L74 41 74 46 37 46z"/><path d="M55.747 0l44.9 43.24 6.506-6.069 4.677 4.234-55.915 54.412L10.42 51.651l-6.022 5.813L0 53.2 55.747 0zM14.912 47.315L55.93 87.131 96.918 47.31 55.93 7.469 14.912 47.315z"/></g></svg>
+        <h1>TinyMCE skin SDK for Silver theme</h1>
+        <p>This SDK will give you the tools needed to build and customize skins for the TinyMCE Silver theme.</p>
+    </header>
+
+    <section>
+        <h2>Getting started</h2>
+        <p>To get started and learn more about the build process, see <code>README.md</code>.</p>
+    </section>
+
+    <section>
+        <h2>Component gallery</h2>
+        <p>A page with all TinyMCE 5 components.</p>
+        <nav>
+            <ul>
+                <li><a href="/component-gallery/index.html">Component list</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <h2>Skin tool</h2>
+        <p>Quickly make skins in realtime. Note, the Skin tool is in early beta.</p>
+        <nav>
+            <ul>
+                <li><a href="/skin-tool/index.html">Skin tool</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <h2>Editor examples</h2>
+        <p>Some examples of TinyMCE editor skins and configs.</p>
+        <nav>
+            <ul>
+                <li><a href="/editor-demos/default.html">Default editor</a></li>
+                <li><a href="/editor-demos/inline.html">Inline editor</a></li>
+                <li><a href="/editor-demos/distraction-free.html">Distraction free</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; Tiny Technologies, Inc. All rights reserved. See LICENSE.TXT for more information.</p>
+    </footer>
 </body>

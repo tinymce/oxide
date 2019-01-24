@@ -34,7 +34,7 @@
     }
   };
 
-  const json = fetch('/skin/less-variables.json').then((x) => {
+  const json = fetch('/skin-tool/less-variables.json').then((x) => {
     return x.json();
   })
 

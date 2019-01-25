@@ -91,8 +91,21 @@
     <section>
         <h2>Editor examples</h2>
         <p>Some examples of TinyMCE editor skins and configs.</p>
+        <div>
+            <p>
+                <strong>Ui skin:</strong>
+                <select name="skin" id="ui">
+                    
+                </select>
+            </p>
+            <p>
+                <strong>Content skin:</strong>
+                <select name="contentcss" id="content">
+                </select>
+            </p>
+        </div>
         <nav>
-            <ul>
+            <ul class="link-list">
                 <li><a href="/editor-demos/default.html">Default editor</a></li>
                 <li><a href="/editor-demos/inline.html">Inline editor</a></li>
                 <li><a href="/editor-demos/distraction-free.html">Distraction free</a></li>
@@ -103,4 +116,39 @@
     <footer>
         <p>Copyright &copy; Tiny Technologies, Inc. All rights reserved. See LICENSE.TXT for more information.</p>
     </footer>
+    <script>
+        const setDefault = (select) => select.value = 'default';
+        var addOptionTo = (select) => (skin) => {
+            var option = document.createElement('option');
+            var text = document.createTextNode(skin);
+            option.value = skin;
+            option.appendChild(text);
+            select.appendChild(option);
+        } 
+        (function () {
+            document.addEventListener('DOMContentLoaded', () => {
+                var contentSkins = [], uiSkins = [];
+                /** ADD_DATA */
+                var uiSelect = document.querySelector('select#ui');
+                var contentSelect = document.querySelector('select#content');
+                var links = document.querySelectorAll('.link-list a');
+
+                uiSkins.forEach(addOptionTo(uiSelect));
+                contentSkins.forEach(addOptionTo(contentSelect));
+
+                setDefault(uiSelect);
+                setDefault(contentSelect);
+                
+                var handleChange = (e) => {
+                    links.forEach((a) => {
+                        const url = new URL(a.href);
+                        url.searchParams.set(e.target.name, e.target.value);
+                        a.href = url.toString();
+                    })
+                };
+                uiSelect.addEventListener('change', handleChange);
+                contentSelect.addEventListener('change', handleChange);
+            })
+        })()
+    </script>
 </body>

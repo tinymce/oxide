@@ -35,8 +35,8 @@ module.exports = (port) => {
       },
 
       {
-        "label": "Test toolbar separation",
-        "url": `http://host.docker.internal:${port}/tests/test-toolbar-separation.html`,
+        "label": "Test general styling",
+        "url": `http://host.docker.internal:${port}/tests/test-general-styling.html`,
         "readyEvent": "backstopjs_ready",
         "viewports": [
           {

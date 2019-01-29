@@ -12,8 +12,12 @@ body {
 }
 
 #app {
+  bottom: 0;
   display: flex;
-  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 .config {

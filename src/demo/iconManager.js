@@ -5,7 +5,9 @@
  * For commercial licenses see https://www.tiny.cloud/
  */
 
-var tinymce = {};
+if (!tinymce) {
+  var tinymce = {};
+}
 
 tinymce.IconManager = (function() {
   var iconPacks = {};

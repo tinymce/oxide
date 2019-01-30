@@ -111,7 +111,6 @@
   });
 
   less.pageLoadFinished.then(() => {
-    console.log('timeout')
     editor.focus();
     editor.refresh();
   }, 100);

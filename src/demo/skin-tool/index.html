@@ -19,6 +19,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/lint/lint.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/hint/show-hint.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/lint/json-lint.min.js"></script>
+    <script src="https://cloud.tinymce.com/5-dev/tinymce.min.js?apiKey=qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc"></script>
+    <script>
+        tinymce.init({
+            selector:'#testeditor',
+            height: 400,
+            skin: false,
+
+            plugins: [
+                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "save table contextmenu directionality template paste textcolor colorpicker imagetools"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic forecolor backcolor | link image table media | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | fullpage ",
+
+            image_advtab: true,
+
+            spellchecker_callback: function(method, words, callback) {
+                if (method == "spellcheck") {
+                    var suggestions = {};
+
+                    for (var i = 0; i < words.length; i++) {
+                        suggestions[words[i]] = ["First", "second"];
+                    }
+
+                    callback(suggestions);
+                }
+            },
+
+            templates: [
+                {title: 'Some title 1', description: 'Some desc 1', content: '<strong class="red">My content: {$username}</strong>'},
+                {title: 'Some title 2', description: 'Some desc 2', url: 'development.html'}
+            ],
+        });
+    </script>
 </head>
 
 <body>
@@ -28,21 +62,13 @@
 
             <footer class="footer">
                 <div class="icon-packer"></div>
-                <p>Press <code>CTRL + .</code> to open an autocomplete dialog with all variables</p>
+                <p>Press <code>CTRL + .</code> to open an autocomplete dialog with all variables or inspect the theme less source files</p>
                 <p><button type="button" id="reset">Reset</button></p>
             </section>
 
             <section class="output" id="right">
                 <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/basic-editor.html')
-                </article>
-
-                <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/full-editor.html')
-                </article>
-
-                <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/menubar-only.html')
+                    <textarea id="testeditor"></textarea>
                 </article>
 
                 <article class="component" style="flex-basis: 100%;">
@@ -235,7 +261,7 @@
             </section>
         </div>
 
-        <script src="../iconManager.js"></script>
+        <!-- <script src="../iconManager.js"></script> -->
         <script src="split.min.js"></script>
         <script src="scripts.js"></script>
     </body>

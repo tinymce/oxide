@@ -69,7 +69,7 @@
     return acc;
   }, {})
 
-  const editor_json = CodeMirror.fromTextArea(document.getElementById('code'), {
+  const editor = CodeMirror.fromTextArea(document.getElementById('code'), {
     lineNumbers: false,
     mode: 'text/css',
     lint: true,
@@ -79,9 +79,10 @@
     },
     hintOptions: { hint: findHint }
   });
+
   const data = getData();
-  editor_json.setValue(stringify(data, 0, 2));
-  editor_json.on(
+  editor.setValue(stringify(data, 0, 2));
+  editor.on(
     'change',
     debounce((cm) => {
       const val = cm.getValue();
@@ -98,7 +99,7 @@
   button.addEventListener('click', () => {
     localStorage.clear();
     const data = getData();
-    editor_json.setValue(stringify(data));
+    editor.setValue(stringify(data));
   });
 
   // Set up split.js for resizable panes
@@ -107,4 +108,8 @@
     sizes: [30, 70]
   });
 
+  less.pageLoadFinished.then(() => {
+    editor.focus();
+    editor.refresh();
+  }, 100);
 })();

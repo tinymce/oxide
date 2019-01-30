@@ -12,7 +12,7 @@
             fill: #555;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 16px;
-            grid-gap: 10%;
+            grid-gap: 1rem 10%;
             grid-template-columns: repeat(2, 1fr);
             margin: auto;
             max-width: 760px;
@@ -53,6 +53,12 @@
             color: #1976d2;
             text-decoration: none;
         }
+
+        select {
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: .25rem;
+        }
     </style>
 </head>
 
@@ -91,16 +97,63 @@
     <section>
         <h2>Editor examples</h2>
         <p>Some examples of TinyMCE editor skins and configs.</p>
+        <div style="display: flex;">
+            <p style="flex: 1; margin: 0 .25rem 0 0;">
+                <small><strong>UI skin</strong></small><br>
+                <select name="skin" id="ui"></select>
+            </p>
+            <p style="flex: 1; margin: 0 0 0 .25rem;">
+                <small><strong>Content skin</strong></small><br>
+                <select name="contentcss" id="content"></select>
+            </p>
+        </div>
         <nav>
-            <ul>
+            <p><small><strong>Open editor</strong></small></p>
+            <ul class="link-list">
                 <li><a href="/editor-demos/default.html">Default editor</a></li>
                 <li><a href="/editor-demos/inline.html">Inline editor</a></li>
-                <li><a href="/editor-demos/distraction-free.html">Distraction free</a></li>
+                <li><a href="/editor-demos/distraction-free.html">Distraction free editor</a></li>
             </ul>
         </nav>
+        <p><small><em>Note that Content skins only works with the default editor</em></small></p>
     </section>
 
     <footer>
         <p>Copyright &copy; Tiny Technologies, Inc. All rights reserved. See LICENSE.TXT for more information.</p>
     </footer>
+    <script>
+        const setDefault = (select) => select.value = 'default';
+        var addOptionTo = (select) => (skin) => {
+            var option = document.createElement('option');
+            var text = document.createTextNode(skin);
+            option.value = skin;
+            option.appendChild(text);
+            select.appendChild(option);
+        }
+        (function () {
+            document.addEventListener('DOMContentLoaded', () => {
+                var contentSkins = [], uiSkins = [];
+                /** ADD_DATA */
+                var uiSelect = document.querySelector('select#ui');
+                var contentSelect = document.querySelector('select#content');
+                var links = document.querySelectorAll('.link-list a');
+
+                uiSkins.forEach(addOptionTo(uiSelect));
+                contentSkins.forEach(addOptionTo(contentSelect));
+
+                setDefault(uiSelect);
+                setDefault(contentSelect);
+
+                var handleChange = (e) => {
+                    links.forEach((a) => {
+                        const url = new URL(a.href);
+                        url.searchParams.set(e.target.name, e.target.value);
+                        a.href = url.toString();
+                    })
+                };
+                uiSelect.addEventListener('change', handleChange);
+                contentSelect.addEventListener('change', handleChange);
+            })
+        })()
+    </script>
 </body>

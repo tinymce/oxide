@@ -5,22 +5,54 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet/less" type="text/css" href="theme/theme.less" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="less.min.js" ></script>
-
     <link rel="stylesheet" href="codemirror-material.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/codemirror.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/codemirror.min.js"></script>
     <script src="//rawgithub.com/zaach/jsonlint/79b553fb65c192add9066da64043458981b3972b/lib/jsonlint.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/mode/css/css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/addon/selection/active-line.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/addon/lint/lint.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/addon/hint/show-hint.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/addon/lint/json-lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/selection/active-line.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/lint/lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/lint/json-lint.min.js"></script>
+    <script src="https://cloud.tinymce.com/5-dev/tinymce.min.js?apiKey=qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc"></script>
+    <script>
+        tinymce.init({
+            selector:'#testeditor',
+            height: 400,
+            skin: false,
+
+            plugins: [
+                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "save table contextmenu directionality template paste textcolor colorpicker imagetools"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic forecolor backcolor | link image table media | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | fullpage ",
+
+            image_advtab: true,
+
+            spellchecker_callback: function(method, words, callback) {
+                if (method == "spellcheck") {
+                    var suggestions = {};
+
+                    for (var i = 0; i < words.length; i++) {
+                        suggestions[words[i]] = ["First", "second"];
+                    }
+
+                    callback(suggestions);
+                }
+            },
+
+            templates: [
+                {title: 'Some title 1', description: 'Some desc 1', content: '<strong class="red">My content: {$username}</strong>'},
+                {title: 'Some title 2', description: 'Some desc 2', url: 'development.html'}
+            ],
+        });
+    </script>
 </head>
 
 <body>
@@ -29,40 +61,14 @@
             <textarea id="code" rows="10"></textarea>
 
             <footer class="footer">
-                <p>Icon pack</p>
                 <div class="icon-packer"></div>
-                <p>Press <code>CTRL + .</code> to open an autocomplete dialog with all variables</p>
-                <button type="button" id="reset">Reset</button>
+                <p>Press <code>CTRL + .</code> to open an autocomplete dialog with all variables or inspect the theme less source files</p>
+                <p><button type="button" id="reset">Reset</button></p>
             </section>
 
             <section class="output" id="right">
-
                 <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/basic-editor.html')
-                </article>
-
-                <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/full-editor.html')
-                </article>
-
-                <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/menubar-only.html')
-                </article>
-
-                <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/inline-basic.html')
-                </article>
-
-                <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/inline-menubar.html')
-                </article>
-
-                <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/inline-full.html')
-                </article>
-
-                <article class="component" style="flex-basis: 100%;">
-                    @@include('../component-gallery/default-editor/states.html')
+                    <textarea id="testeditor"></textarea>
                 </article>
 
                 <article class="component">
@@ -75,18 +81,6 @@
 
                 <article class="component">
                     @@include('../component-gallery/pop-editor/input.html')
-                </article>
-
-                <article class="component">
-                    @@include('../component-gallery/pop-editor/toolbar-big.html')
-                </article>
-
-                <article class="component">
-                    @@include('../component-gallery/pop-editor/color-swatches.html')
-                </article>
-
-                <article class="component">
-                    @@include('../component-gallery/pop-editor/insert.html')
                 </article>
 
                 <article class="component">
@@ -110,10 +104,6 @@
                 </article>
 
                 <article class="component">
-                  @@include('../component-gallery/bar/bar.html')
-                </article>
-
-                <article class="component">
                     @@include('../component-gallery/checkbox/checkbox.html')
                 </article>
 
@@ -126,22 +116,18 @@
                 </article>
 
                 <article class="component">
-                    <p>Primary button</p>
                     @@include('../component-gallery/forms/primary-button.html')
                 </article>
 
                 <article class="component">
-                    <p>Secondary button</p>
                     @@include('../component-gallery/forms/secondary-button.html')
                 </article>
 
                 <article class="component">
-                    <p>Icon button</p>
                     @@include('../component-gallery/forms/icon-button.html')
                 </article>
 
                 <article class="component">
-                    <p>Naked button</p>
                     @@include('../component-gallery/forms/naked-button.html')
                 </article>
 
@@ -151,24 +137,6 @@
 
                 <article class="component">
                     @@include('../component-gallery/tooltip/tooltip.html')
-                </article>
-
-                <article class="component">
-                    <div class="tox tox-tinymce-aux">
-                        @@include('../component-gallery/dialog/anchor.html')
-                    </div>
-                </article>
-
-                <article class="component">
-                    <div class="tox tox-tinymce-aux">
-                        @@include('../component-gallery/dialog/page-embed.html')
-                    </div>
-                </article>
-
-                <article class="component">
-                    <div class="tox tox-tinymce-aux">
-                        @@include('../component-gallery/dialog/page-embed-advanced.html')
-                    </div>
                 </article>
 
                 <article class="component">
@@ -205,36 +173,6 @@
                     <div class="tox tox-tinymce-aux">
                         @@include('../component-gallery/dialog/blocked.html')
                     </div>
-                </article>
-
-                <article class="component" style="flex-basis: 300px;">
-                    <p>Comment with 'show more' and 'show less'</p>
-                    @@include('../component-gallery/comments/comments-show-more-less.html')
-                </article>
-
-                <article class="component" style="flex-basis: 300px;">
-                    <p>Edit comment</p>
-                    @@include('../component-gallery/comments/comments-edit.html')
-                </article>
-
-                <article class="component" style="flex-basis: 300px;">
-                    <p>Delete comment</p>
-                    @@include('../component-gallery/comments/comments-delete.html')
-                </article>
-
-                <article class="component" style="flex-basis: 300px;">
-                    <p>Delete conversation</p>
-                    @@include('../component-gallery/comments/comments-delete-conversation.html')
-                </article>
-
-                <article class="component" style="flex-basis: 300px;">
-                    <p>Conversations Sidebar</p>
-                    @@include('../component-gallery/comments/sidebar.html')
-                </article>
-
-                <article class="component" style="flex-basis: 300px;">
-                    <p>Loading Sidebar</p>
-                    @@include('../component-gallery/comments/sidebar-loading.html')
                 </article>
             </section>
         </div>

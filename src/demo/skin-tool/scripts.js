@@ -11,11 +11,9 @@
   };
 
   const defaultVars = {
+    'site-background-color': '#fff',
     'background-color': '#fff',
-    'base-value': '16px',
-    'color-black': '#222f3e',
-    'color-tint': '#3498db',
-    'color-white': '#fff'
+    'color-tint': '#0984e3',
   };
 
   const changeBodyBackground = (data) => document.body.style.backgroundColor = data['site-background-color'] || null;
